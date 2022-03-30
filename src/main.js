@@ -76,6 +76,11 @@ function addFavEl() {
 	);
 	buttonEl.setAttribute("data-fav", "btn");
 	if (cityGeo) {
+		if (cityGeo.name === localStorage.getItem(cityGeo.name)) {
+			return alert(
+				`${cityGeo.name} is already in your list.\nTry searching for a different city. `
+			);
+		}
 		buttonEl.textContent = cityGeo.name;
 		favEl.appendChild(buttonEl);
 		setTimeout(() => {
