@@ -13,7 +13,6 @@ Rather than storing all items && its content, I made a decision to limit local
 storage to the city name and let JS async do its network magic ;) It seems like
 a reasonable compromise and I obviously wouldn't have chosen that path if it was
 prohibited by the specs.
-
 [live page](https://rkutsel.github.io/js-weather-dashboard/).
 
 ## Additional Notes
