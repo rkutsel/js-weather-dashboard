@@ -29,7 +29,6 @@ async function getCityData() {
 		.then((response) => response.json())
 		.then((data) => {
 			cityWeather = data;
-			console.log(data);
 		});
 }
 
@@ -42,7 +41,6 @@ async function getCityGeo(city) {
 		.then((response) => {
 			if (!response.ok) {
 				alert("Bad request. Please try again.");
-				// cityGeo = {};
 			} else {
 				return response.json();
 			}
@@ -62,7 +60,6 @@ async function getUserInput() {
 	} else if (!getCityGeo(userInput)) {
 		alert(`Unable to find ${userInput}. \n Please try again`);
 	} else {
-		console.log(cityGeo);
 		addFavEl();
 	}
 }
@@ -91,7 +88,6 @@ function addFavEl() {
 function addFavListener(event) {
 	var favEl = event.target;
 	const cityName = favEl.textContent;
-	console.log(cityName);
 	getCityGeo(cityName);
 	setTimeout(() => {
 		addContent(cityName);
@@ -126,8 +122,6 @@ function addContent(city = cityGeo.name) {
 	setUvi();
 
 	for (let i = 0; i < cardEl.length; i++) {
-		// console.log(a[i].children)
-		console.log(cardEl[i].children);
 		cardEl[i].children[0].textContent = `${convertUnixTime(
 			cityWeather.daily[i + 1].dt
 		)}`;
@@ -172,7 +166,6 @@ function setUvi() {
 
 function renderStorageEl() {
 	const favEl = document.getElementById("fav-list");
-	// let buttonEl = document.createElement("button");
 
 	cityEl = Object.keys(localStorage);
 	if (cityEl.length > 0) {
@@ -188,7 +181,6 @@ function renderStorageEl() {
 			for (let i = 0; i < btnEl.length; i++) {
 				btnEl[i].addEventListener("click", () => {
 					getCityGeo(btnEl[i].textContent);
-					console.log(cityGeo);
 					setTimeout(() => {
 						addContent();
 					}, 500);
