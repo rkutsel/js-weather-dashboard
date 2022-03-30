@@ -27,8 +27,9 @@ tackling those in the near future.
 - [x] Have a way to control the max number of items in the list. Limiting to 10
       items seems reasonable. Fixed in
       [6f6fbf7](https://github.com/rkutsel/js-weather-dashboard/commit/6f6fbf7260d60c718f4b3a1015d352061f598967)
-- [ ] Add another button beneath the favorite list items that would clear them
-      all.
+- [x] Add another button beneath the favorite list items that would clear them
+      all. Added in
+      [a51ee3d](https://github.com/rkutsel/js-weather-dashboard/commit/a51ee3d74083e4aef812c50ffe0c4716f39fe018)
 - [ ] Ability to remove individual items from the menu. This one is probably
       going to be tricky to tackle as it would require major changes for both
       CSS && JS.
