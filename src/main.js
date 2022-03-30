@@ -3,6 +3,8 @@
 const favList = document.getElementById("fav-list");
 const searchEl = document.getElementById("search-btn");
 const userInputEl = document.getElementById("user-input");
+const removeAllBtn = document.getElementById("remove-all-btn");
+
 let cityGeo = {};
 let cityWeather = {};
 let userInput = "";
@@ -67,14 +69,8 @@ async function getUserInput() {
 function addFavEl() {
 	const favEl = document.getElementById("fav-list");
 	const buttonEl = document.createElement("button");
-	buttonEl.classList.add(
-		"mt-2",
-		"d-flex-fluid",
-		"btn",
-		"btn-secondary",
-		"fav-btn"
-	);
-	buttonEl.setAttribute("data-fav", "btn");
+	buttonEl.classList.add("mt-2", "d-flex-fluid", "btn", "btn-secondary");
+	buttonEl.setAttribute("id", "fav-btn");
 	if (cityGeo) {
 		if (cityGeo.name === localStorage.getItem(cityGeo.name)) {
 			return alert(
@@ -198,8 +194,19 @@ function renderStorageEl() {
 	}
 }
 
+function removeAllEl() {
+	const btnEl = document.querySelectorAll("#fav-btn");
+	const cityEl = Object.keys(localStorage);
+	for (let i = 0; i < cityEl.length; i++) {
+		localStorage.removeItem(cityEl[i]);
+		btnEl[i].remove();
+	}
+	renderStorageEl();
+}
+
 function initApp() {
 	searchEl.addEventListener("click", getUserInput);
+	removeAllBtn.addEventListener("click", removeAllEl);
 	renderStorageEl();
 }
 
