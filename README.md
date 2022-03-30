@@ -21,8 +21,9 @@ Even though this deliverable meets the MVP specs, I was thinking of adding a few
 more features that would make it a little bit more user-friendly. Plan on
 tackling those in the near future.
 
-- [ ] Prevent dup items in the favorite list so that I can't add the same city
-      more than once.
+- [x] Prevent dup items in the favorite list so that I can't add the same city
+      more than once. Fixed in
+      [d577226](https://github.com/rkutsel/js-weather-dashboard/commit/d57722621d69105eed78e980aa4702f48e4946f3)
 - [ ] Have a way control the max number of items in the list. Maybe limit it to
       10 items which seems to be reasonable.
 - [ ] Add another button beneath the favorite list items that would clear them
