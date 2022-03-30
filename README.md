@@ -24,8 +24,9 @@ tackling those in the near future.
 - [x] Prevent dup items in the favorite list so that I can't add the same city
       more than once. Fixed in
       [d577226](https://github.com/rkutsel/js-weather-dashboard/commit/d57722621d69105eed78e980aa4702f48e4946f3)
-- [ ] Have a way control the max number of items in the list. Maybe limit it to
-      10 items which seems to be reasonable.
+- [x] Have a way to control the max number of items in the list. Limiting to 10
+      items seems reasonable. Fixed in
+      [6f6fbf7](https://github.com/rkutsel/js-weather-dashboard/commit/6f6fbf7260d60c718f4b3a1015d352061f598967)
 - [ ] Add another button beneath the favorite list items that would clear them
       all.
 - [ ] Ability to remove individual items from the menu. This one is probably
