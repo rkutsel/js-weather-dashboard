@@ -201,7 +201,6 @@ function removeAllEl() {
 		localStorage.removeItem(cityEl[i]);
 		btnEl[i].remove();
 	}
-	renderStorageEl();
 }
 
 function initApp() {
