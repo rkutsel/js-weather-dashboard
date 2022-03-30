@@ -78,8 +78,10 @@ function addFavEl() {
 	if (cityGeo) {
 		if (cityGeo.name === localStorage.getItem(cityGeo.name)) {
 			return alert(
-				`${cityGeo.name} is already in your list.\nTry searching for a different city. `
+				`${cityGeo.name} is already in your list.\nTry searching for a different city.`
 			);
+		} else if (Object.keys(localStorage).length > 9) {
+			return alert(`You can only have 10 items in your list.`);
 		}
 		buttonEl.textContent = cityGeo.name;
 		favEl.appendChild(buttonEl);
