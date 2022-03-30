@@ -16,9 +16,11 @@ prohibited by the specs.
 
 [live page](https://rkutsel.github.io/js-weather-dashboard/).
 
-##Additional Notes Even though this deliverable meets the MVP specs, I was
-thinking of adding a few more features that would make it a little bit more
-user-friendly. Plan on tackling those in the near future.
+## Additional Notes
+
+Even though this deliverable meets the MVP specs, I was thinking of adding a few
+more features that would make it a little bit more user-friendly. Plan on
+tackling those in the near future.
 
 - [ ] Prevent dup items in the favorite list so that I can't add the same city
       more than once.
