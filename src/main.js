@@ -25,7 +25,7 @@ async function getCityData() {
 	const apiQuery = `?lat=${cityGeo.coord.lat}&lon=${cityGeo.coord.lon}&exclude=minutely,hourly,alerts&units=imperial`;
 	const apiKey = "&appid=0da948eb4dff4edc16d53212f5e1d944";
 
-	let fetchForecast = await fetch(apiRoot + apiQuery + apiKey)
+	const fetchForecast = await fetch(apiRoot + apiQuery + apiKey)
 		.then((response) => response.json())
 		.then((data) => {
 			cityWeather = data;
@@ -37,7 +37,7 @@ async function getCityGeo(city) {
 	const apiRoot = "https://api.openweathermap.org/data/2.5/forecast";
 	const apiQuery = "?cnt=1&appid=0da948eb4dff4edc16d53212f5e1d944&q=";
 
-	let fetchCityGeo = await fetch(apiRoot + apiQuery + city)
+	const fetchCityGeo = await fetch(apiRoot + apiQuery + city)
 		.then((response) => {
 			if (!response.ok) {
 				alert("Bad request. Please try again.");
@@ -86,7 +86,7 @@ function addFavEl() {
 }
 
 function addFavListener(event) {
-	var favEl = event.target;
+	const favEl = event.target;
 	const cityName = favEl.textContent;
 	getCityGeo(cityName);
 	setTimeout(() => {
